@@ -1,0 +1,73 @@
+<section class="hero">
+  <div class="container hero__container">
+    <div class="hero__main">
+      <h1 class="hero__title" aria-label="Фильтр недвижемости">Фильтр</h1>
+      <form action="#" class="form hero__form hero-grid">
+        <label class="form__label hero__label hero-grid__item hero-grid__span-five">
+          <input type="search" name="Поиск" class="input-reset form__input hero__input hero__input--search"
+            placeholder="Поиск по описанию...">
+        </label>
+        <label class="form__label hero__label hero-grid__item hero-grid__span-three">
+          <span class="form__tag hero__tag" aria-label="Название пункта">Тип недвижимости</span>
+          <div class="hero__form-inner">
+            <select class="input-reset form__select hero__select" name="Тип недвижемости">
+              <option value="Все" selected aria-selected="true">Все</option>
+              <option value="Аренда">Аренда</option>
+              <option value="Продажи">Продажи</option>
+            </select>
+          </div>
+        </label>
+        <label class="form__label hero__label hero-grid__item hero-grid__span-four">
+          <span class="form__tag hero__tag" aria-label="Название пункта">Профиль</span>
+          <div class="hero__form-inner">
+            <select class="input-reset form__select hero__select" name="Профиль">
+              <option value="Все" selected aria-selected="true">Все</option>
+              <option value="Офис в бизнес-центре">Офис в бизнес-центре</option>
+              <option value="Склад">Склад</option>
+              <option value="Квартиры">Квартиры</option>
+            </select>
+          </div>
+        </label>
+        <label class="form__label hero__label hero-grid__item hero-grid__span-three">
+          <span class="form__tag hero__tag" aria-label="Название пункта">Район</span>
+          <div class="hero__form-inner">
+            <select class="input-reset form__select hero__select" name="Район">
+              <option value="Все" selected aria-selected="true">Все</option>
+              <option value="Дарницкий">Дарницкий</option>
+              <option value="Деснянский">Деснянский</option>
+              <option value="Оболонский">Оболонский</option>
+              <option value="Святошинский">Святошинский</option>
+            </select>
+          </div>
+        </label>
+        <label class="form__label hero__label hero-grid__item hero-grid__span-four">
+          <span class="form__tag hero__tag" aria-label="Название пункта">Улица</span>
+          <input type="text" name="Улица" class="input-reset form__input hero__input" placeholder="Введите улицу...">
+        </label>
+        <label class="form__label hero__label hero-grid__item hero-grid__span-two">
+          <span class="form__tag hero__tag" aria-label="Название пункта">№/Дом</span>
+          <input type="text" name="Номер дома" class="input-reset form__input hero__input" placeholder="...">
+        </label>
+        <div class="form__box hero__form-box hero-grid__item hero-grid__span-three">
+          <span class="form__tag hero__tag hero__tag--grid" aria-label="Название пункта">Общая площадь</span>
+          <label class="form__label hero__label">
+            <input type="text" name="Площадь от" class="input-reset form__input hero__input" placeholder="От">
+          </label>
+          <label class="form__label hero__label">
+            <input type="text" name="Площадь до" class="input-reset form__input hero__input" placeholder="До">
+          </label>
+        </div>
+        <div class="form__box hero__form-box hero-grid__item hero-grid__span-four">
+          <span class="form__tag hero__tag hero__tag--grid" aria-label="Название пункта">Цена (грн)</span>
+          <label class="form__label hero__label">
+            <input type="number" name="Цена от" class="input-reset form__input hero__input" placeholder="От">
+          </label>
+          <label class="form__label hero__label">
+            <input type="number" name="Цена до" class="input-reset form__input hero__input" placeholder="До">
+          </label>
+        </div>
+        <button class="btn btn-reset form__btn hero__form-btn">Найти</button>
+      </form>
+    </div>
+  </div>
+</section>

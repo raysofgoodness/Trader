@@ -1,0 +1,183 @@
+.hero {
+  min-height: 640px;
+  @include image-set('../img/hero-bg');
+  @include bg-cover;
+  padding: 100px 0;
+  @include tablet {
+    min-height: 440px;
+    padding: 60px 0;
+  }
+  @include tablet-s {
+    min-height: 300px;
+    padding: 30px 0;
+  }
+  &__main {
+    padding: 36px 76px;
+    background: rgba(255, 255, 255, 0.38);
+    border-radius: 15px;
+    @include tablet {
+      padding: 26px 56px;
+    }
+    @include tablet-s {
+      padding: 12px 20px;
+    }
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 170%;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      margin-bottom: 15px;
+    }
+  }
+  &__form {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px 30px;
+    align-items: end;
+    @include tablet {
+      gap: 15px 25px;
+    }
+    @include tablet-s {
+      grid-template-columns: repeat(8, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px 0;
+    }
+  }
+  &__form-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 10px;
+  }
+  &__form-inner {
+    position: relative;
+    &::before {
+      content: url('../img/sel-arrow.svg');
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 32px;
+    }
+    @include tablet {
+      &::before {
+        right: 20px;
+      }
+    }
+    @include mobile {
+      &::before {
+        right: 12px;
+      }
+    }
+  }
+  &__tag {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 170%;
+    color: var(--dark-color);
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+  }
+  &__tag--grid {
+    grid-column: 2 span;
+  }
+  &__label {
+    display: block;
+    width: 100%;
+  }
+  &__input, &__select {
+    width: 100%;
+    padding: 17px 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 170%;
+    border-radius: 10px;
+    color: var(--dark-color);
+    outline: none;
+    transition: all ease-in-out 0.3s;
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.6);
+    }
+    &:focus {
+      box-shadow: -1px 4px 20px 0px rgb(19 17 154 / 25%);
+    }
+    @include tablet {
+      padding: 12px 14px;
+    }
+  }
+  &__select {
+    cursor: pointer;
+    padding-right: 42px;
+    @include tablet {
+      padding-right: 30px;
+    }
+    @include mobile {
+      padding-right: 20px;
+    }
+  }
+  &__input--search {
+    padding: 24px 30px;
+    @include tablet {
+      padding: 16px 22px;
+    }
+    @include mobile {
+      padding: 10px;
+    }
+  }
+  &__form-btn {
+    min-width: auto;
+    grid-column: 11 / span 2;
+    @include tablet {
+      grid-column: 10 / span 3;
+    }
+    @include tablet-s {
+      grid-column: 6 / span 3;
+    }
+    @include mobile {
+      grid-column: span 2;
+    }
+  }
+}
+
+.hero-grid {
+  &__span-five {
+    grid-column: 5 span;
+  }
+  &__span-four {
+    grid-column: 4 span;
+  }
+  &__span-three {
+    grid-column: 3 span;
+  }
+  &__span-two {
+    grid-column: 2 span;
+  }
+  &__row-two {
+    grid-row: 2 / 3;
+  }
+  &__row-three {
+    grid-row: 3 / 4;
+  }
+  @include tablet-s {
+    &__item {
+      grid-column: 7 span;
+    }
+  }
+  @include mobile {
+    &__item {
+      grid-column: 4 span;
+    }
+  }
+}

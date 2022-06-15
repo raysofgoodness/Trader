@@ -1,0 +1,176 @@
+.btn {
+  min-width: 220px;
+  padding: 18px;
+  background-color: var(--dark-color);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 170%;
+  color: var(--light-color);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  @include hover {
+    background-color: var(--light-color);
+    border-color: var(--dark-color);
+    color: var(--dark-color);
+  }
+  @include tablet {
+    min-width: 180px;
+    padding: 16px;
+    font-size: 18px;
+  }
+}
+
+.btn--light {
+  background-color: var(--light-color);
+  border-color: inherit;
+  color: var(--dark-color);
+  @include hover {
+    background-color: var(--dark-color);
+    border-color: transparent;
+    color: var(--light-color);
+  }
+}
+
+.logo {
+  position: relative;
+  max-width: 174px;
+  padding: 8px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 170%;
+  color: var(--light-color);
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: border ease-in-out 0.3s;
+  @include hover {
+    border-color: inherit;
+  }
+  @include mobile {
+    font-size: 24px;
+  }
+}
+
+.phone {
+  position: relative;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 170%;
+  color: var(--light-color);
+  &::before {
+    content: url('../img/phone-icon.svg');
+    display: block;
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+    position: absolute;
+    top: 5px;
+    left: 0;
+  }
+  &::after {
+    @include pseudo;
+    width: 0;
+    height: 2px;
+    background-color: var(--light-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.4s ease-in-out;
+  }
+  @include hover {
+    &::after {
+      width: 100%;
+    }
+  }
+  @include mobile {
+    padding-left: 20px;
+    &::before {
+      width: 12px;
+      height: 12px;
+      top: 4px;
+    }
+  }
+}
+
+.policy {
+  position: relative;
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 170%;
+  color: var(--light-color);
+  &::after {
+    @include pseudo;
+    width: 0;
+    height: 2px;
+    background-color: var(--light-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.4s ease-in-out;
+  }
+  @include hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.pagination-list {
+  max-width: 700px;
+  @include flex-h-center;
+  margin: 0 auto;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 170%;
+    color: var(--dark-color);
+  }
+  &__link--active {
+    @include flex-all-center;
+    width: 37px;
+    height: 37px;
+    background-color: var(--dark-color);
+    border-radius: 50%;
+    color: var(--light-color);
+    text-align: center;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 70px;
+  @include tablet-s {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 30px 0;
+  }
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: -10px -12px;
+  &__item {
+    padding: 10px 26px;
+    background-color: var(--light-color);
+    border: 1px solid var(--dark-color);
+    border-radius: 8px;
+    margin: 10px 12px;
+  }
+  @include tablet-s {
+    justify-content: center;
+  }
+}
+
+

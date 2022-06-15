@@ -1,0 +1,277 @@
+.view-advert {
+  padding: 60px 0 100px 0;
+  @include tablet {
+    padding: 40px 0 60px 0;
+  }
+  @include tablet-s {
+    padding: 30px 0 50px 0;
+  }
+  &__back {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 170%;
+    color: var(--dark-color);
+    &::before {
+      content: url('../img/back-icon.svg');
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+    }
+    @include tablet-s {
+      margin-bottom: 15px;
+    }
+  }
+  &__wrapper {
+    grid-template-rows: auto;
+  }
+  &__content {
+    grid-column: 7 span;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      grid-column: 6 span;
+    }
+    @include tablet-s {
+      grid-column: 8 span;
+      grid-row: auto;
+      order: 2;
+    }
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 170%;
+    color: var(--dark-color);
+    @include mobile {
+      line-height: 120%;
+      margin-bottom: 20px;
+    }
+  }
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 170%;
+    color: var(--dark-color);
+    @include tablet-s {
+      margin-bottom: 20px;
+    }
+  }
+  &__text {
+    padding-bottom: 50px;
+    @include tablet-s {
+      padding-bottom: 20px;
+    }
+  }
+  &__description {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 170%;
+    color: var(--dark-color);
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+  &__right {
+    grid-column: 5 span;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      grid-column: 6 span;
+    }
+    @include tablet-s {
+      grid-column: 8 span;
+      grid-row: auto;
+      order: 3;
+    }
+  }
+  &__profile {
+    @include flex-v-center;
+    margin-bottom: 50px;
+    padding: 45px 40px;
+    background-color: var(--light-color);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.11);
+    border-radius: 10px;
+    @include big-desktop {
+      padding: 30px;
+    }
+    @include tablet-s {
+      padding: 15px;
+    }
+  }
+  &__user {
+    @include flex-v-center;
+  }
+  &__user-icon {
+    display: block;
+    width: 47px;
+    height: 47px;
+    margin-right: 14px;
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @include tablet-s {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__user-name {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 170%;
+    color: var(--dark-color);
+    @include tablet-s {
+      font-size: 20px;
+      line-height: 140%;
+    }
+  }
+  &__user-btn {
+    min-width: 196px;
+    margin-left: auto;
+    margin-right: 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 170%;
+    text-align: center;
+    @include big-desktop {
+      min-width: 160px;
+    }
+  }
+  &__slider {
+    padding-top: 50px;
+    grid-column: 7 span;
+    grid-row: 2 / 3;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: minmax(370px, 470px) 1fr;
+    grid-template-rows: repeat(3, minmax(88px, 100px));
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    @include tablet {
+      grid-column: 6 span;
+      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: auto;
+    }
+    @include tablet-s {
+      padding-top: 10px;
+      border-top: none;
+      grid-template-rows: minmax(250px, 320px) auto;
+      grid-column: 8 span;
+      grid-row: auto;
+      order: 1;
+    }
+    @include mobile {
+      grid-template-rows: minmax(200px, 250px) auto;
+    }
+  }
+  &__item {
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    picture {
+      display: block;
+      max-width: 100%;
+      height: 100%;
+      img {
+        display: block;
+        height: 100%;
+      }
+    }
+  }
+  &__item--main {
+    grid-column: 1 span;
+    grid-row: 3 span;
+    @include tablet {
+      grid-column: 3 span;
+      grid-row: 1 span;
+    }
+  }
+}
+
+.send-form {
+  padding-top: 50px;
+  grid-column: 5 span;
+  grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  @include tablet {
+    grid-column: 6 span;
+  }
+  @include tablet-s {
+    grid-column: 8 span;
+    grid-row: auto;
+    order: 4;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 170%;
+    color: var(--dark-color);
+    @include tablet-s {
+      margin-bottom: 20px;
+    }
+  }
+  &__label {
+    width: 100%;
+  }
+  &__message {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 40px 40px 38px 40px;
+    background-color: var(--light-color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170%;
+    resize: vertical;
+    border: none;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.11);
+    border-radius: 10px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 170%;
+      color: rgba(0, 0, 0, 0.6);
+
+    }
+    @include tablet-s {
+      padding: 30px 30px 28px 30px;
+    }
+  }
+  &__btn {
+    min-width: 196px;
+    align-self: flex-end;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 170%;
+    text-align: center;
+    @include hover {
+      border-color: var(--dark-color);
+    }
+  }
+}

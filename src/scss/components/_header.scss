@@ -1,0 +1,10 @@
+.header {
+  background-color: var(--dark-color);
+  padding: 46px 0;
+  &__container {
+    @include flex-all-sb;
+  }
+  @include small-tablet {
+    padding: 26px 0;
+  }
+}
